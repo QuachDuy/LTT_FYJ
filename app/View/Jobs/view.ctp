@@ -16,9 +16,9 @@
 			<?php echo h($job['Job']['career_id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Company Id'); ?></dt>
+		<dt><?php echo __('Employer Id'); ?></dt>
 		<dd>
-			<?php echo h($job['Job']['company_id']); ?>
+			<?php echo h($job['Job']['employer_id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Location Id'); ?></dt>
@@ -46,6 +46,21 @@
 			<?php echo h($job['Job']['contact']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Finish Date'); ?></dt>
+		<dd>
+			<?php echo h($job['Job']['finish_date']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Confirmed'); ?></dt>
+		<dd>
+			<?php echo h($job['Job']['confirmed']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Approved'); ?></dt>
+		<dd>
+			<?php echo h($job['Job']['approved']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Start Date'); ?></dt>
 		<dd>
 			<?php echo h($job['Job']['start_date']); ?>
@@ -71,14 +86,14 @@
 			<?php echo h($job['Job']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Updater'); ?></dt>
+		<dt><?php echo __('Modifier'); ?></dt>
 		<dd>
-			<?php echo h($job['Job']['updater']); ?>
+			<?php echo h($job['Job']['modifier']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Updated'); ?></dt>
+		<dt><?php echo __('Modified'); ?></dt>
 		<dd>
-			<?php echo h($job['Job']['updated']); ?>
+			<?php echo h($job['Job']['modified']); ?>
 			&nbsp;
 		</dd>
 	</dl>

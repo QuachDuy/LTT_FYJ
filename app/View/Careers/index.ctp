@@ -8,8 +8,8 @@
 			<th><?php echo $this->Paginator->sort('disable_flag'); ?></th>
 			<th><?php echo $this->Paginator->sort('creator'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('updater'); ?></th>
-			<th><?php echo $this->Paginator->sort('updated'); ?></th>
+			<th><?php echo $this->Paginator->sort('modifier'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -21,8 +21,8 @@
 		<td><?php echo h($career['Career']['disable_flag']); ?>&nbsp;</td>
 		<td><?php echo h($career['Career']['creator']); ?>&nbsp;</td>
 		<td><?php echo h($career['Career']['created']); ?>&nbsp;</td>
-		<td><?php echo h($career['Career']['updater']); ?>&nbsp;</td>
-		<td><?php echo h($career['Career']['updated']); ?>&nbsp;</td>
+		<td><?php echo h($career['Career']['modifier']); ?>&nbsp;</td>
+		<td><?php echo h($career['Career']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $career['Career']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $career['Career']['id'])); ?>

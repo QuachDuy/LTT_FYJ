@@ -21,9 +21,19 @@
 			<?php echo h($employer['Employer']['password']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Company Id'); ?></dt>
+		<dt><?php echo __('Address'); ?></dt>
 		<dd>
-			<?php echo h($employer['Employer']['company_id']); ?>
+			<?php echo h($employer['Employer']['address']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Description'); ?></dt>
+		<dd>
+			<?php echo h($employer['Employer']['description']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Size Id'); ?></dt>
+		<dd>
+			<?php echo h($employer['Employer']['size_id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Disable Flag'); ?></dt>
@@ -41,14 +51,14 @@
 			<?php echo h($employer['Employer']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Updater'); ?></dt>
+		<dt><?php echo __('Modifier'); ?></dt>
 		<dd>
-			<?php echo h($employer['Employer']['updater']); ?>
+			<?php echo h($employer['Employer']['modifier']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Updated'); ?></dt>
+		<dt><?php echo __('Modified'); ?></dt>
 		<dd>
-			<?php echo h($employer['Employer']['updated']); ?>
+			<?php echo h($employer['Employer']['modified']); ?>
 			&nbsp;
 		</dd>
 	</dl>

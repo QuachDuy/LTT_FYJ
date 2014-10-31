@@ -41,14 +41,14 @@
 			<?php echo h($admin['Admin']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Updater'); ?></dt>
+		<dt><?php echo __('Modifier'); ?></dt>
 		<dd>
-			<?php echo h($admin['Admin']['updater']); ?>
+			<?php echo h($admin['Admin']['modifier']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Updated'); ?></dt>
+		<dt><?php echo __('Modified'); ?></dt>
 		<dd>
-			<?php echo h($admin['Admin']['updated']); ?>
+			<?php echo h($admin['Admin']['modified']); ?>
 			&nbsp;
 		</dd>
 	</dl>

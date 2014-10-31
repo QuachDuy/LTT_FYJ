@@ -7,12 +7,14 @@
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('email'); ?></th>
 			<th><?php echo $this->Paginator->sort('password'); ?></th>
-			<th><?php echo $this->Paginator->sort('company_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('address'); ?></th>
+			<th><?php echo $this->Paginator->sort('description'); ?></th>
+			<th><?php echo $this->Paginator->sort('size_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('disable_flag'); ?></th>
 			<th><?php echo $this->Paginator->sort('creator'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('updater'); ?></th>
-			<th><?php echo $this->Paginator->sort('updated'); ?></th>
+			<th><?php echo $this->Paginator->sort('modifier'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -23,12 +25,14 @@
 		<td><?php echo h($employer['Employer']['name']); ?>&nbsp;</td>
 		<td><?php echo h($employer['Employer']['email']); ?>&nbsp;</td>
 		<td><?php echo h($employer['Employer']['password']); ?>&nbsp;</td>
-		<td><?php echo h($employer['Employer']['company_id']); ?>&nbsp;</td>
+		<td><?php echo h($employer['Employer']['address']); ?>&nbsp;</td>
+		<td><?php echo h($employer['Employer']['description']); ?>&nbsp;</td>
+		<td><?php echo h($employer['Employer']['size_id']); ?>&nbsp;</td>
 		<td><?php echo h($employer['Employer']['disable_flag']); ?>&nbsp;</td>
 		<td><?php echo h($employer['Employer']['creator']); ?>&nbsp;</td>
 		<td><?php echo h($employer['Employer']['created']); ?>&nbsp;</td>
-		<td><?php echo h($employer['Employer']['updater']); ?>&nbsp;</td>
-		<td><?php echo h($employer['Employer']['updated']); ?>&nbsp;</td>
+		<td><?php echo h($employer['Employer']['modifier']); ?>&nbsp;</td>
+		<td><?php echo h($employer['Employer']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $employer['Employer']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $employer['Employer']['id'])); ?>

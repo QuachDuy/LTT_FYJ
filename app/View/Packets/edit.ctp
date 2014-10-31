@@ -11,7 +11,7 @@
 		echo $this->Form->input('price');
 		echo $this->Form->input('disable_flag');
 		echo $this->Form->input('creator');
-		echo $this->Form->input('updater');
+		echo $this->Form->input('modifier');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

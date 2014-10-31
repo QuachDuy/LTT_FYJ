@@ -6,17 +6,20 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('title');
 		echo $this->Form->input('career_id');
-		echo $this->Form->input('company_id');
+		echo $this->Form->input('employer_id');
 		echo $this->Form->input('location_id');
 		echo $this->Form->input('priority');
 		echo $this->Form->input('description');
 		echo $this->Form->input('requirement');
 		echo $this->Form->input('contact');
+		echo $this->Form->input('finish_date');
+		echo $this->Form->input('confirmed');
+		echo $this->Form->input('approved');
 		echo $this->Form->input('start_date');
 		echo $this->Form->input('end_date');
 		echo $this->Form->input('disable_flag');
 		echo $this->Form->input('creator');
-		echo $this->Form->input('updater');
+		echo $this->Form->input('modifier');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

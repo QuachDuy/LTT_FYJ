@@ -6,9 +6,9 @@
 			<?php echo h($oder['Oder']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Company Id'); ?></dt>
+		<dt><?php echo __('Employer Id'); ?></dt>
 		<dd>
-			<?php echo h($oder['Oder']['company_id']); ?>
+			<?php echo h($oder['Oder']['employer_id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Packet Id'); ?></dt>
@@ -31,14 +31,14 @@
 			<?php echo h($oder['Oder']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Updater'); ?></dt>
+		<dt><?php echo __('Modifier'); ?></dt>
 		<dd>
-			<?php echo h($oder['Oder']['updater']); ?>
+			<?php echo h($oder['Oder']['modifier']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Updated'); ?></dt>
+		<dt><?php echo __('Modified'); ?></dt>
 		<dd>
-			<?php echo h($oder['Oder']['updated']); ?>
+			<?php echo h($oder['Oder']['modified']); ?>
 			&nbsp;
 		</dd>
 	</dl>
