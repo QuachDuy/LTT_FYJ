@@ -1,10 +1,10 @@
 <?php
 App::uses('AppController', 'Controller');
 /**
- * Admins Controller
+ * Packets Controller
  *
  */
-class AdminsController extends AppController {
+class PacketsController extends AppController {
 
 /**
  * Scaffold

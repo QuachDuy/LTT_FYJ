@@ -1,10 +1,10 @@
 <?php
 App::uses('AppController', 'Controller');
 /**
- * Admins Controller
+ * ConpanyMedia Controller
  *
  */
-class AdminsController extends AppController {
+class ConpanyMediaController extends AppController {
 
 /**
  * Scaffold
