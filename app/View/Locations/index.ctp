@@ -8,8 +8,8 @@
 			<th><?php echo $this->Paginator->sort('disable_flag'); ?></th>
 			<th><?php echo $this->Paginator->sort('creator'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('modifier'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th><?php echo $this->Paginator->sort('updater'); ?></th>
+			<th><?php echo $this->Paginator->sort('updated'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -21,8 +21,8 @@
 		<td><?php echo h($location['Location']['disable_flag']); ?>&nbsp;</td>
 		<td><?php echo h($location['Location']['creator']); ?>&nbsp;</td>
 		<td><?php echo h($location['Location']['created']); ?>&nbsp;</td>
-		<td><?php echo h($location['Location']['modifier']); ?>&nbsp;</td>
-		<td><?php echo h($location['Location']['modified']); ?>&nbsp;</td>
+		<td><?php echo h($location['Location']['updater']); ?>&nbsp;</td>
+		<td><?php echo h($location['Location']['updated']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $location['Location']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $location['Location']['id'])); ?>

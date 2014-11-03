@@ -12,7 +12,7 @@
 		echo $this->Form->input('phone');
 		echo $this->Form->input('disable_flag');
 		echo $this->Form->input('creator');
-		echo $this->Form->input('modifier');
+		echo $this->Form->input('updater');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

@@ -6,12 +6,10 @@
 		echo $this->Form->input('name');
 		echo $this->Form->input('email');
 		echo $this->Form->input('password');
-		echo $this->Form->input('address');
-		echo $this->Form->input('description');
-		echo $this->Form->input('size_id');
+		echo $this->Form->input('company_id');
 		echo $this->Form->input('disable_flag');
 		echo $this->Form->input('creator');
-		echo $this->Form->input('modifier');
+		echo $this->Form->input('updater');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

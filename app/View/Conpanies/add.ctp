@@ -1,13 +1,12 @@
-<div class="packets form">
-<?php echo $this->Form->create('Packet'); ?>
+<div class="conpanies form">
+<?php echo $this->Form->create('Conpany'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Packet'); ?></legend>
+		<legend><?php echo __('Add Conpany'); ?></legend>
 	<?php
 		echo $this->Form->input('name');
+		echo $this->Form->input('address');
 		echo $this->Form->input('description');
-		echo $this->Form->input('priority');
-		echo $this->Form->input('quota');
-		echo $this->Form->input('price');
+		echo $this->Form->input('size_id');
 		echo $this->Form->input('disable_flag');
 		echo $this->Form->input('creator');
 		echo $this->Form->input('updater');
@@ -19,6 +18,6 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Packets'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Conpanies'), array('action' => 'index')); ?></li>
 	</ul>
 </div>

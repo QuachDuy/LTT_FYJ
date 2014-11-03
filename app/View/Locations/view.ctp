@@ -26,14 +26,14 @@
 			<?php echo h($location['Location']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modifier'); ?></dt>
+		<dt><?php echo __('Updater'); ?></dt>
 		<dd>
-			<?php echo h($location['Location']['modifier']); ?>
+			<?php echo h($location['Location']['updater']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt><?php echo __('Updated'); ?></dt>
 		<dd>
-			<?php echo h($location['Location']['modified']); ?>
+			<?php echo h($location['Location']['updated']); ?>
 			&nbsp;
 		</dd>
 	</dl>

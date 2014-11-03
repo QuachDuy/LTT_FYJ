@@ -25,8 +25,8 @@ CREATE TABLE `tb_admins` (
   `disactive_flag` tinyint(1) NOT NULL DEFAULT '0',
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -38,23 +38,39 @@ CREATE TABLE `tb_careers` (
   `disable_flag` tinyint(1) NOT NULL DEFAULT '0',
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-/*Table structure for table `tb_employer_media` */
+/*Table structure for table `tb_conpanies` */
 
-CREATE TABLE `tb_employer_media` (
+CREATE TABLE `tb_conpanies` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `employer_id` int(11) NOT NULL,
-  `path` text COLLATE utf8_unicode_ci NOT NULL,
-  `type` int(1) NOT NULL,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `address` text COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci,
+  `size_id` int(11) NOT NULL,
   `disable_flag` tinyint(1) NOT NULL DEFAULT '0',
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `tb_conpany_media` */
+
+CREATE TABLE `tb_conpany_media` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `company_id` int(100) NOT NULL,
+  `path` text COLLATE utf8_unicode_ci NOT NULL,
+  `type` int(11) NOT NULL,
+  `disable_flag` tinyint(1) NOT NULL DEFAULT '0',
+  `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -68,8 +84,8 @@ CREATE TABLE `tb_employer_quota` (
   `disable_flag` tinyint(1) NOT NULL DEFAULT '0',
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -80,14 +96,12 @@ CREATE TABLE `tb_employers` (
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `address` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `description` text COLLATE utf8_unicode_ci,
-  `size_id` int(11) NOT NULL,
+  `company_id` int(11) DEFAULT NULL,
   `disable_flag` tinyint(1) NOT NULL,
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -97,22 +111,19 @@ CREATE TABLE `tb_jobs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `career_id` int(11) NOT NULL,
-  `employer_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
   `location_id` int(11) NOT NULL,
   `priority` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `requirement` text COLLATE utf8_unicode_ci,
   `contact` text COLLATE utf8_unicode_ci,
-  `finish_date` datetime NOT NULL,
-  `confirmed` int(1) NOT NULL DEFAULT '0',
-  `approved` int(1) NOT NULL DEFAULT '0',
-  `start_date` datetime DEFAULT NULL,
-  `end_date` datetime DEFAULT NULL,
+  `start_date` datetime NOT NULL,
+  `end_date` datetime NOT NULL,
   `disable_flag` tinyint(1) NOT NULL DEFAULT '0',
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -124,8 +135,8 @@ CREATE TABLE `tb_locations` (
   `disable_flag` tinyint(1) NOT NULL DEFAULT '0',
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -133,13 +144,13 @@ CREATE TABLE `tb_locations` (
 
 CREATE TABLE `tb_oders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `employer_id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
+  `company_id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
   `packet_id` int(11) NOT NULL,
   `disable_flag` tinyint(1) NOT NULL DEFAULT '0',
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -155,8 +166,8 @@ CREATE TABLE `tb_packets` (
   `disable_flag` tinyint(1) NOT NULL DEFAULT '0',
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -173,8 +184,8 @@ CREATE TABLE `tb_users` (
   `disable_flag` tinyint(1) NOT NULL,
   `creator` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modifier` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `modified` datetime NOT NULL,
+  `updater` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

@@ -6,22 +6,19 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('title'); ?></th>
 			<th><?php echo $this->Paginator->sort('career_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('employer_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('company_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('location_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('priority'); ?></th>
 			<th><?php echo $this->Paginator->sort('description'); ?></th>
 			<th><?php echo $this->Paginator->sort('requirement'); ?></th>
 			<th><?php echo $this->Paginator->sort('contact'); ?></th>
-			<th><?php echo $this->Paginator->sort('finish_date'); ?></th>
-			<th><?php echo $this->Paginator->sort('confirmed'); ?></th>
-			<th><?php echo $this->Paginator->sort('approved'); ?></th>
 			<th><?php echo $this->Paginator->sort('start_date'); ?></th>
 			<th><?php echo $this->Paginator->sort('end_date'); ?></th>
 			<th><?php echo $this->Paginator->sort('disable_flag'); ?></th>
 			<th><?php echo $this->Paginator->sort('creator'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('modifier'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th><?php echo $this->Paginator->sort('updater'); ?></th>
+			<th><?php echo $this->Paginator->sort('updated'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -31,22 +28,19 @@
 		<td><?php echo h($job['Job']['id']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['title']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['career_id']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['employer_id']); ?>&nbsp;</td>
+		<td><?php echo h($job['Job']['company_id']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['location_id']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['priority']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['description']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['requirement']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['contact']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['finish_date']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['confirmed']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['approved']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['start_date']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['end_date']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['disable_flag']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['creator']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['created']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['modifier']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['modified']); ?>&nbsp;</td>
+		<td><?php echo h($job['Job']['updater']); ?>&nbsp;</td>
+		<td><?php echo h($job['Job']['updated']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $job['Job']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $job['Job']['id'])); ?>

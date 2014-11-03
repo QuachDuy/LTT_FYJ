@@ -26,14 +26,14 @@
 			<?php echo h($career['Career']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modifier'); ?></dt>
+		<dt><?php echo __('Updater'); ?></dt>
 		<dd>
-			<?php echo h($career['Career']['modifier']); ?>
+			<?php echo h($career['Career']['updater']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt><?php echo __('Updated'); ?></dt>
 		<dd>
-			<?php echo h($career['Career']['modified']); ?>
+			<?php echo h($career['Career']['updated']); ?>
 			&nbsp;
 		</dd>
 	</dl>

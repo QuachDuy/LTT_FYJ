@@ -51,14 +51,14 @@
 			<?php echo h($user['User']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modifier'); ?></dt>
+		<dt><?php echo __('Updater'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['modifier']); ?>
+			<?php echo h($user['User']['updater']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt><?php echo __('Updated'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['modified']); ?>
+			<?php echo h($user['User']['updated']); ?>
 			&nbsp;
 		</dd>
 	</dl>

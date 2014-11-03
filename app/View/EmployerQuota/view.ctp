@@ -36,14 +36,14 @@
 			<?php echo h($employerQuotum['EmployerQuotum']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modifier'); ?></dt>
+		<dt><?php echo __('Updater'); ?></dt>
 		<dd>
-			<?php echo h($employerQuotum['EmployerQuotum']['modifier']); ?>
+			<?php echo h($employerQuotum['EmployerQuotum']['updater']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt><?php echo __('Updated'); ?></dt>
 		<dd>
-			<?php echo h($employerQuotum['EmployerQuotum']['modified']); ?>
+			<?php echo h($employerQuotum['EmployerQuotum']['updated']); ?>
 			&nbsp;
 		</dd>
 	</dl>

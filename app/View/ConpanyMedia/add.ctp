@@ -1,10 +1,11 @@
-<div class="oders form">
-<?php echo $this->Form->create('Oder'); ?>
+<div class="conpanyMedia form">
+<?php echo $this->Form->create('ConpanyMedia'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Oder'); ?></legend>
+		<legend><?php echo __('Add Conpany Media'); ?></legend>
 	<?php
 		echo $this->Form->input('company_id');
-		echo $this->Form->input('packet_id');
+		echo $this->Form->input('path');
+		echo $this->Form->input('type');
 		echo $this->Form->input('disable_flag');
 		echo $this->Form->input('creator');
 		echo $this->Form->input('updater');
@@ -16,6 +17,6 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Oders'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Conpany Media'), array('action' => 'index')); ?></li>
 	</ul>
 </div>

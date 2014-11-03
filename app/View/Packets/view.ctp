@@ -46,14 +46,14 @@
 			<?php echo h($packet['Packet']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modifier'); ?></dt>
+		<dt><?php echo __('Updater'); ?></dt>
 		<dd>
-			<?php echo h($packet['Packet']['modifier']); ?>
+			<?php echo h($packet['Packet']['updater']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt><?php echo __('Updated'); ?></dt>
 		<dd>
-			<?php echo h($packet['Packet']['modified']); ?>
+			<?php echo h($packet['Packet']['updated']); ?>
 			&nbsp;
 		</dd>
 	</dl>
