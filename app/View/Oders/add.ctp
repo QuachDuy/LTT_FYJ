@@ -3,11 +3,11 @@
 	<fieldset>
 		<legend><?php echo __('Add Oder'); ?></legend>
 	<?php
-		echo $this->Form->input('company_id');
+		echo $this->Form->input('employer_id');
 		echo $this->Form->input('packet_id');
 		echo $this->Form->input('disable_flag');
 		echo $this->Form->input('creator');
-		echo $this->Form->input('updater');
+		echo $this->Form->input('modifier');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

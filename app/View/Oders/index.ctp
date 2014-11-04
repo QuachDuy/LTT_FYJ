@@ -4,13 +4,13 @@
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('company_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('employer_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('packet_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('disable_flag'); ?></th>
 			<th><?php echo $this->Paginator->sort('creator'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('updater'); ?></th>
-			<th><?php echo $this->Paginator->sort('updated'); ?></th>
+			<th><?php echo $this->Paginator->sort('modifier'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -18,13 +18,13 @@
 	<?php foreach ($oders as $oder): ?>
 	<tr>
 		<td><?php echo h($oder['Oder']['id']); ?>&nbsp;</td>
-		<td><?php echo h($oder['Oder']['company_id']); ?>&nbsp;</td>
+		<td><?php echo h($oder['Oder']['employer_id']); ?>&nbsp;</td>
 		<td><?php echo h($oder['Oder']['packet_id']); ?>&nbsp;</td>
 		<td><?php echo h($oder['Oder']['disable_flag']); ?>&nbsp;</td>
 		<td><?php echo h($oder['Oder']['creator']); ?>&nbsp;</td>
 		<td><?php echo h($oder['Oder']['created']); ?>&nbsp;</td>
-		<td><?php echo h($oder['Oder']['updater']); ?>&nbsp;</td>
-		<td><?php echo h($oder['Oder']['updated']); ?>&nbsp;</td>
+		<td><?php echo h($oder['Oder']['modifier']); ?>&nbsp;</td>
+		<td><?php echo h($oder['Oder']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $oder['Oder']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $oder['Oder']['id'])); ?>

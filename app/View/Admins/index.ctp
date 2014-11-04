@@ -11,8 +11,8 @@
 			<th><?php echo $this->Paginator->sort('disactive_flag'); ?></th>
 			<th><?php echo $this->Paginator->sort('creator'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('updater'); ?></th>
-			<th><?php echo $this->Paginator->sort('updated'); ?></th>
+			<th><?php echo $this->Paginator->sort('modifier'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -27,8 +27,8 @@
 		<td><?php echo h($admin['Admin']['disactive_flag']); ?>&nbsp;</td>
 		<td><?php echo h($admin['Admin']['creator']); ?>&nbsp;</td>
 		<td><?php echo h($admin['Admin']['created']); ?>&nbsp;</td>
-		<td><?php echo h($admin['Admin']['updater']); ?>&nbsp;</td>
-		<td><?php echo h($admin['Admin']['updated']); ?>&nbsp;</td>
+		<td><?php echo h($admin['Admin']['modifier']); ?>&nbsp;</td>
+		<td><?php echo h($admin['Admin']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $admin['Admin']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $admin['Admin']['id'])); ?>

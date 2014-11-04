@@ -13,8 +13,8 @@
 			<th><?php echo $this->Paginator->sort('disable_flag'); ?></th>
 			<th><?php echo $this->Paginator->sort('creator'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('updater'); ?></th>
-			<th><?php echo $this->Paginator->sort('updated'); ?></th>
+			<th><?php echo $this->Paginator->sort('modifier'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -31,8 +31,8 @@
 		<td><?php echo h($user['User']['disable_flag']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['creator']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['updater']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['updated']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['modifier']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
